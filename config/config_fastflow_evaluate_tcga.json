@@ -1,0 +1,6 @@
+{
+    "pixel_threshold": -0.5275,
+    "pixel_min": -0.6849607825279236,
+    "pixel_max": -0.0013779004802927375,
+    "resume_path": "checkpoint/fastflow_tcga.pt"
+}

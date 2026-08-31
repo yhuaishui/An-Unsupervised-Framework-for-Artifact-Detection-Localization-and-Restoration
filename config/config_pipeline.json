@@ -1,0 +1,13 @@
+{
+    "name": "Pathology",  
+
+    "pipeline": {
+        "detection_and_localization": {
+            "config_path": "config/config_detection_localization.json" //UPDATE
+        },
+        "restoration_model": {
+            "config_path": "config/config_restoration_model.json", //UPDATE
+            "model_path": "checkpoint/restore.pth" //UPDATE
+        }
+    }
+}

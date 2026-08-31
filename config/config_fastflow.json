@@ -1,0 +1,70 @@
+{
+    "name": "fastflow_pathology",
+    "gpu_ids": [0],
+    "seed": -1,
+    "finetune_norm": false,
+    
+    "path": {
+        "base_dir": "experiments", //update
+        "results": "results",
+        "checkpoint": "checkpoint",
+        "resume_path": null,
+        "resume_state": null
+    },
+    "datasets": {
+        "train": {
+            "dataset": {
+                "data_root": "data/train/imgs", //update
+                "data_len": -1,
+                "image_size":[224, 224],
+                "data_aug": true
+            },
+            "dataloader":{
+                "batch_size": 32, 
+                "num_workers": 4,
+                "shuffle": true,
+                "pin_memory": true,
+                "drop_last": true
+            }
+        },
+        "val": {
+            "dataset": {
+                "imgs_root": "data/test/imgs", //update
+                "gts_root": "data/test/gts",   //update
+                "data_len": -1,
+                "image_size":[224, 224],
+                "target_size":[256, 256],
+                "data_aug": true
+            },
+            "dataloader":{
+                "batch_size": 32, 
+                "num_workers": 4,
+                "shuffle": false,
+                "pin_memory": true,
+                "drop_last": false
+            }
+        }
+    },
+    "model": {
+        "backbone_name": "hf_hub:prov-gigapath/prov-gigapath",
+        "backbone_pretrained": true,
+        "transforms_mean": [0.485, 0.456, 0.406],
+        "transforms_std": [0.229, 0.224, 0.225],
+        "flow_steps": 20,
+        "conv3x3_only": false,
+        "hidden_ratio": 0.16,
+        "input_size": 224,
+        "output_size": 256
+    },
+    "train": {
+        "lr": 1e-3,
+        "weight_decay": 1e-5,
+        "num_epochs": 250,
+        "eval_interval": 5,
+        "checkpoint_interval": 5,
+        "log_interval": 10
+    },
+    "evaluate": {
+        "resume_path": null
+    }
+}

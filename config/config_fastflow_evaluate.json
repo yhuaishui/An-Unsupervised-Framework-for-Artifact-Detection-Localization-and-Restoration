@@ -1,0 +1,6 @@
+{
+    "pixel_threshold": -0.5606220960617065,
+    "pixel_min": -0.6945750713348389,
+    "pixel_max": -6.942374602658674e-05,
+    "resume_path": "checkpoint/fastflow.pt"
+}
