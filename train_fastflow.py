@@ -10,6 +10,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 from tqdm import tqdm
 from sklearn.metrics import roc_auc_score, roc_curve
+import core.util as Util
 
 class AverageMeter:
     """Computes and stores the average and current value"""
@@ -268,6 +269,9 @@ if __name__ == "__main__":
     gpu_str = ','.join(str(x) for x in opt['gpu_ids'])
     os.environ['CUDA_VISIBLE_DEVICES'] = gpu_str
     print('export CUDA_VISIBLE_DEVICES={}'.format(gpu_str))
+
+    Util.set_seed(opt['seed'])
+    print('set seed={}'.format(opt['seed']))
 
     if args.phase == 'test':
         evaluate(args, opt)
