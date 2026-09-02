@@ -1,0 +1,16 @@
+numpy
+scipy
+pillow
+opencv-python-headless
+scikit-image
+albumentations
+timm
+huggingface_hub
+FrEIA
+pytorch-ignite
+scikit-learn
+matplotlib
+pandas
+tqdm
+torch
+torchvision
