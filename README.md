@@ -14,7 +14,6 @@ An interactive demo is provided in [`demo_pipeline.ipynb`](demo_pipeline.ipynb) 
 
 1. **Simulation of artifact datasets** Generate synthetic artifacts to enable robust, unsupervised validation of model performance and to derive standardized parameters for heatmap generation.
 2. **Whole-slide image (WSI) inference** Implement efficient inference pipelines capable of processing large-scale histopathological slides.
-3. **Pretrained weights release** Provide publicly accessible model checkpoints to facilitate reproducible research and downstream fine-tuning across diverse applications.
 
 ## Directory Structure
 
@@ -157,7 +156,7 @@ The normalization stats and detector checkpoint are stored in [`config/config_fa
 
 ## Pretrained Models
 
-Pretrained weights will be uploaded to [`Hugging Face`](https://huggingface.co/yhuaishui/Histopathology-Artifact-Pipeline) shortly. If you have recommendations for other cloud storage platforms, please feel free to let us know.
+Pretrained weights can be downloaded from [`Hugging Face (yhuaishui/Histopathology-Artifact-Pipeline)`](https://huggingface.co/yhuaishui/Histopathology-Artifact-Pipeline). If you have recommendations for other cloud storage platforms, please feel free to let us know.
 
 Before running inference, place your trained weights at the paths referenced by the configs:
 
