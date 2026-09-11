@@ -8,7 +8,7 @@ This folder contains the implementation of an automatic pipeline for **artifact 
 2. **Localizes** the artifact regions by combining the anomaly heatmap with unsupervised image segmentation and post-processing;
 3. **Restores** the artifact regions with a conditional denoising diffusion model (Palette-style inpainting) that re-generates the missing tissue content.
 
-An interactive demo is provided in [`demo_pipeline.ipynb`](demo_pipeline.ipynb) with sample patches under [`data/sample_patch`](data/sample_patch). The same notebook also has a **WSI ROI** section that visualizes whole-slide inference results, using the sample region of interest shipped in [`data/sample_wsi_roi`](data/sample_wsi_roi) ([`can be downloaded from Hugging Face`]([data/sample_wsi_roi](https://huggingface.co/yhuaishui/Histopathology-Artifact-Pipeline))).
+An interactive demo is provided in [`demo_pipeline.ipynb`](demo_pipeline.ipynb) with sample patches under [`data/sample_patch`](data/sample_patch). The same notebook also has a **WSI ROI** section that visualizes whole-slide inference results, using the sample region of interest shipped in `sample_wsi_roi` ([`can be downloaded from Hugging Face`](https://huggingface.co/yhuaishui/Histopathology-Artifact-Pipeline)).
 <p align="center">
 <img src=data/fig1.jpg />
 </p>
@@ -135,7 +135,7 @@ Both scripts expose `num_processes` and `gpu_ids` in `main()` (defaults: `num_pr
 
 The `# wsi roi sample` section of [`demo_pipeline.ipynb`](demo_pipeline.ipynb) loads the four TIFFs of the sample ROI with OpenSlide and shows, at a thumbnail resolution, the input image, the anomaly map, the artifact mask and the restored image side by side. It then draws the patch grid read from `coords.h5` on the input image, together with an overlay of the predicted artifact mask.
 
-The sample under `data/sample_wsi_roi` ([`can be downloaded from Hugging Face`]([data/sample_wsi_roi](https://huggingface.co/yhuaishui/Histopathology-Artifact-Pipeline))) is a 5 × 5 patch ROI (`2560 × 2560` pixels at level 0) and contains:
+The sample under `sample_wsi_roi` ([`can be downloaded from Hugging Face`](https://huggingface.co/yhuaishui/Histopathology-Artifact-Pipeline)) is a 5 × 5 patch ROI (`2560 × 2560` pixels at level 0) and contains:
 
 | File                | Description                                                                 |
 |---------------------|-----------------------------------------------------------------------------|
