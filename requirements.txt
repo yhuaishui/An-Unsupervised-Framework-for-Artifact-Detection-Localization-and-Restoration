@@ -1,7 +1,10 @@
 numpy
 scipy
+h5py
 pillow
 opencv-python-headless
+pyvips
+openslide-python
 scikit-image
 albumentations
 timm
