@@ -116,7 +116,7 @@ Every patch listed in `coords.h5` is read from the slide, passed to `HisAnomalyM
 ### Stage 2 — Restoration (`run_wsi_restore.py`)
 
 ```bash
-python run_wsi_restore.pyw
+python run_wsi_restore.py
 ```
 
 Stage 2 consumes the outputs of stage 1 (`detail_result.csv`, `img.tiff`, `mask.tiff`) and writes `restore.tiff`. Patches are handled differently depending on their labels:
